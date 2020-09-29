@@ -49,9 +49,9 @@ window.addEventListener('scroll', function () {
     }
     //console.log(scrollX);
 });
-$(function(){
-  $('#loadingScreen').fadeOut();
-  $('body').css("overflow-x" ,"visible");
-});
-const left=window.innerWidth/2;
-$('#loadObject').css('left',left);
+window.onload=function () {
+    $('#loadingScreen').fadeOut();
+    $('body').css("overflow-x", "visible");
+};
+const left = window.innerWidth / 2;
+$('#loadObject').css('left', left);
