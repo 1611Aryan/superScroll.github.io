@@ -15,14 +15,15 @@ body {
     /* Internet Explorer/Edge */
     user-select: none;
     /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
+    supported by Chrome, Opera and Firefox */
+    overflow: hidden;
 
 }
-
 
 ::-webkit-scrollbar-corner {
     background-color: rgb(42, 63, 73);
 }
+
 ::-webkit-scrollbar {
     background-color: rgb(140, 180, 235);
     width: 0.5rem;
@@ -37,6 +38,61 @@ body {
     background-color: rgb(42, 63, 73);
 }
 
+#loadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1100vw;
+    height: 100vh;
+    background-color: #323232;
+    z-index: 9;
+    font-size: 10rem;
+}
+
+#loadObject {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+svg #Wave1 {
+    animation: waves 5s infinite;
+}
+
+svg #wave2 {
+    animation: waves 5s infinite;
+}
+
+svg #wave3 {
+    animation: waves 5s infinite;
+}
+
+svg #Boat {
+    animation: puke 1s infinite alternate;
+}
+
+svg #Moon {
+    animation: waveMagnet 3s infinite alternate;
+}
+
+@keyframes waves {
+    50% {
+        transform: translateX(60%);
+    }
+}
+
+@keyframes puke {
+    100% {
+        transform: translateY(2.5%);
+    }
+}
+
+@keyframes waveMagnet {
+    100% {
+        transform: scale(1.05,1.05);
+    }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,7 +104,7 @@ nav {
     height: 8vh;
     font-family: 'Poppins', sans-serif;
     box-shadow: 5px 5px 15px #00000030;
-    z-index: 99999999999999;
+    z-index: 1;
 }
 
 nav h2 {
@@ -64,7 +120,6 @@ nav ul {
     list-style-type: none;
     flex-direction: row;
     margin-right: 1rem;
-
 }
 
 nav a {
@@ -138,10 +193,6 @@ nav a {
     object-fit: cover;
 }
 
-
-
-
-
 #photo1 {
     position: absolute;
     top: 0;
@@ -152,7 +203,6 @@ nav a {
     object-fit: contain;
     background-repeat: repeat-x;
     background-size: cover;
-
 }
 
 #horizontal1 {
@@ -192,7 +242,6 @@ nav a {
     z-index: 9999999999999999;
 }
 
-
 #photo2 {
     position: absolute;
     top: 0;
@@ -203,7 +252,6 @@ nav a {
     object-fit: contain;
     background-repeat: repeat-x;
     background-size: cover;
-
 }
 
 #horizontal2 {
@@ -243,7 +291,6 @@ nav a {
     object-fit: contain;
     background-repeat: repeat-x;
     background-size: cover;
-
 }
 
 #horizontal3 {

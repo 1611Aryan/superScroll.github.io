@@ -8,14 +8,69 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
         integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
     <script src="https://kit.fontawesome.com/ea6e17d3b1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div id="loadingScreen">
+        <svg id="loadObject" width="313" height="314" viewbox="0 0 313 314" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="Scene1">
+                <circle id="Background" cx="156.5" cy="157.052" r="156.5" fill="#3B3838" />
+                <g id="Boat">
+                    <g id="fins">
+                        <path id="Vector 5" d="M157.607 179.436V134.667L189.904 179.436H157.607Z" fill="#E8ED00" />
+                        <path id="Vector 6" d="M156.452 179.436V134.667L188.749 179.436H156.452Z" fill="#FAFF05" />
+                    </g>
+                    <g id="ROD">
+                        <path id="Rectangle 1" d="M153.281 134.667H157.607V219.338H153.281V134.667Z" fill="#C4C4C4" />
+                        <path id="Rectangle 2" d="M153.281 134.667H155.452V220.991H153.281V134.667Z" fill="#AAAAAA" />
+                    </g>
+                    <g id="BASE">
+                        <path id="Vector 3" d="M194.078 227.373H118.808L118.186 192.763H213.984L194.078 227.373Z"
+                            fill="#FF0000" />
+                        <path id="Vector 4" d="M118.661 227.373H193.931L194.553 192.763H98.7552L118.661 227.373Z"
+                            fill="#FF0000" />
+                        <rect id="Rectangle 3" x="97.3636" y="192.763" width="118.273" height="5.19361"
+                            fill="#B40404" />
+                    </g>
+                </g>
+                <circle id="Moon" cx="90.7471" cy="60.0389" r="20.3525" fill="#F7FF9A" />
+                <g id="Ocean">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="313" height="314">
+                        <circle id="Ellipse 5" cx="156.5" cy="157.052" r="156.5" fill="#3B3838" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <rect id="Rectangle 4" x="8.29901" y="227.373" width="290.478" height="108.389"
+                            fill="#08B7CF" />
+                    </g>
+                </g>
+                <g id="Waves">
+                    <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="313" height="314">
+                        <circle id="Background_2" cx="156.5" cy="157.052" r="156.5" fill="#3B3838" />
+                    </mask>
+                    <g mask="url(#mask1)">
+                        <path id="Wave1"
+                            d="M-225.865 238.033C-182.948 228.183 -157.896 225.275 -113.865 225.033C-62.7143 224.753 -35.0114 240.353 16.1353 241.033C73.4881 241.797 104.795 223.615 162.135 225.033C215.029 226.341 243.243 243.654 296.135 245.033C360.246 246.705 395.037 222.923 459.135 225.033C509.702 226.698 538.471 231.193 587.135 245.033"
+                            stroke="#0CF0FF" stroke-width="5" />
+                        <path id="wave2"
+                            d="M-308.981 238.797C-266.064 228.947 -241.013 226.039 -196.981 225.797C-145.83 225.516 -118.128 241.117 -66.9808 241.797C-9.62801 242.561 21.6788 224.379 79.0192 225.797C131.913 227.105 160.127 244.418 213.019 245.797C277.13 247.469 311.921 223.687 376.019 225.797C426.585 227.462 455.355 231.957 504.019 245.797"
+                            stroke="#009FA9" stroke-width="5" />
+                        <path id="wave3"
+                            d="M-191.864 238.505C-148.947 228.655 -123.895 225.747 -79.8636 225.505C-28.7131 225.225 -1.01029 240.825 50.1364 241.505C107.489 242.269 138.796 224.088 196.136 225.505C249.03 226.813 277.244 244.126 330.136 245.505C394.247 247.177 429.038 223.395 493.136 225.505C543.703 227.17 572.473 231.665 621.136 245.505"
+                            stroke="#00959E" stroke-width="5" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+    </div>
     <nav>
         <h2>
             Australia

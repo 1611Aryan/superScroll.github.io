@@ -60,3 +60,9 @@ window.addEventListener('scroll', function () {
   } //console.log(scrollX);
 
 });
+$(function () {
+  $('#loadingScreen').fadeOut();
+  $('body').css("overflow-x", "visible");
+});
+var left = window.innerWidth / 2;
+$('#loadObject').css('left', left);
