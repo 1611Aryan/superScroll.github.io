@@ -61,9 +61,13 @@ window.addEventListener('scroll', function () {
 
 });
 
-window.onload = function () {
+function load() {
   $('#loadingScreen').fadeOut();
   $('body').css("overflow-x", "visible");
+}
+
+window.onload = function () {
+  setTimeout(load, 1500);
 };
 
 var left = window.innerWidth / 2;
